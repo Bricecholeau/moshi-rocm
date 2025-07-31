@@ -10,6 +10,7 @@ COPY . /app
 # Install any needed packages specified in requirements.txt
 # Assuming you have a requirements.txt file in the moshi directory
 RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install torch torchaudio torchvision --index-url https://download.pytorch.org/whl/rocm6.3
 
 # Install Moshi and gradio
 RUN pip install --no-cache-dir moshi gradio
